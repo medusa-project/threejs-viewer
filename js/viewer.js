@@ -27,7 +27,6 @@ function ThreeJSViewer(options) {
   var MTL_FILE = options.mtlFile;
   var OBJ_FILE = options.objFile;
 
-
   var camera, controls, scene, renderer;
 
   init();
@@ -44,11 +43,11 @@ function ThreeJSViewer(options) {
   }
 
   function getHeight() {
-    return window.innerHeight;
+    return getContainer().offsetHeight;
   };
 
   function getWidth() {
-    return window.innerWidth;
+    return getContainer().offsetWidth;
   };
 
   function init() {

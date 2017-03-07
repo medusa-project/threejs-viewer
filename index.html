@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <style>
-      body {
+    body {
+        font-family: sans-serif;
         margin: 0px;
-      }
+    }
+    #viewer-container {
+        width: 100%;
+    }
+    #drop-zone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        background-color: green;
+        color: white;
+        height: 50px;
+    }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="viewer-container"></div>
-    <div>hi</div>
+    <div id="drop-zone">Drop a model folder here.</div>
 
     <script src="js/three.js"></script>
     <script src="js/OrbitControls.js"></script>
@@ -23,12 +36,22 @@
     <script src="js/viewer.js"></script>
 
     <script>
-    		new ThreeJSViewer({
-          'containerId': 'viewer-container',
-          'modelPath': '2004_120991_014_3D_model/',
-					'objFile': '120991_014.OBJ',
-					'mtlFile': '120991_014.mtl'
-        });
+    // Set the container height to a little less than full window height.
+    document.getElementById('viewer-container').style.height =
+            window.innerHeight - 50 + 'px';
+
+    function initViewer(options) {
+        new ThreeJSViewer(options);
+    }
+    /*
+    initViewer({
+        'containerId': 'viewer-container',
+        'modelPath': '2004_120991_014_3D_model/',
+        'objFile': '120991_014.OBJ',
+        'mtlFile': '120991_014.mtl'
+    });
+    */
     </script>
-  </body>
+    <script src="js/drag-n-drop.js"></script>
+</body>
 </html>
