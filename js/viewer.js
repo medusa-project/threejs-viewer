@@ -1,9 +1,9 @@
-function ThreeJSViewer() {
+function ThreeJSViewer(containerId) {
 
   var AMBIENT_LIGHT_COLOR = 0x808080;
   var DIRECTIONAL_LIGHT_COLOR = 0xffffff;
 
-  var camera, container, controls, scene, renderer;
+  var camera, controls, scene, renderer;
   var windowHalfX = window.innerWidth / 2;
   var windowHalfY = window.innerHeight / 2;
 
@@ -16,10 +16,11 @@ function ThreeJSViewer() {
     render();
   }
 
-  function init() {
-    container = document.createElement('div');
-    document.body.appendChild(container);
+  function getContainer() {
+    return document.getElementById(containerId);
+  }
 
+  function init() {
     // Initialize the camera.
     camera = new THREE.PerspectiveCamera(45,
       window.innerWidth / window.innerHeight, 1, 2000);
@@ -70,7 +71,7 @@ function ThreeJSViewer() {
     renderer = new THREE.WebGLRenderer();
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
-    container.appendChild(renderer.domElement);
+    getContainer().appendChild(renderer.domElement);
 
     controls = new THREE.OrbitControls(camera, renderer.domElement);
 

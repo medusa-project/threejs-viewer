@@ -12,6 +12,8 @@
 	</head>
 
 	<body>
+		<div id="viewer-container"></div>
+
 		<script src="js/three.js"></script>
 		<script src="js/OrbitControls.js"></script>
 		<script src="js/DDSLoader.js"></script>
@@ -21,7 +23,7 @@
 		<script src="js/viewer.js"></script>
 
 		<script>
-    		new ThreeJSViewer();
+    		new ThreeJSViewer('viewer-container');
 		</script>
 	</body>
 </html>
