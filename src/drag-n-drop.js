@@ -7,7 +7,6 @@ function getQueryVariable(variable) {
             return decodeURIComponent(pair[1]);
         }
     }
-    console.log('Query variable %s not found', variable);
 }
 
 var modelPath = getQueryVariable('modelPath');
@@ -62,7 +61,6 @@ dropZone.addEventListener('drop', function(e) {
                                 var query = 'modelPath=' + modelPath +
                                         '&objFile=' + objFile +
                                         '&mtlFile=' + mtlFile;
-                                console.log(query);
                                 window.location.search = query
                             }
                         }
