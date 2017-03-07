@@ -15,7 +15,7 @@ module.exports = function (grunt) {
                     'lib/threejs/MTLLoader.js',
                     'lib/threejs/OBJLoader.js',
                     'lib/threejs/Detector.js',
-                    'js/viewer.js'],
+                    'src/viewer.js'],
                 dest: BUILD_DIR + '/3dviewer.js'
             }
             /*
