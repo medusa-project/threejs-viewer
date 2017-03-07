@@ -1,91 +1,94 @@
-var AMBIENT_LIGHT_COLOR = 0x808080;
-var DIRECTIONAL_LIGHT_COLOR = 0xffffff;
+function ThreeJSViewer() {
 
-var camera, container, controls, scene, renderer;
+  var AMBIENT_LIGHT_COLOR = 0x808080;
+  var DIRECTIONAL_LIGHT_COLOR = 0xffffff;
 
-var windowHalfX = window.innerWidth / 2;
-var windowHalfY = window.innerHeight / 2;
+  var camera, container, controls, scene, renderer;
+  var windowHalfX = window.innerWidth / 2;
+  var windowHalfY = window.innerHeight / 2;
 
-init();
-animate();
+  init();
+  animate();
 
-function init() {
-  container = document.createElement('div');
-  document.body.appendChild(container);
+  function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    render();
+  }
 
-  // Initialize the camera.
-  camera = new THREE.PerspectiveCamera(45,
-    window.innerWidth / window.innerHeight, 1, 2000);
+  function init() {
+    container = document.createElement('div');
+    document.body.appendChild(container);
 
-  // Initialize the scene.
-  scene = new THREE.Scene();
+    // Initialize the camera.
+    camera = new THREE.PerspectiveCamera(45,
+      window.innerWidth / window.innerHeight, 1, 2000);
 
-  var ambient = new THREE.AmbientLight(AMBIENT_LIGHT_COLOR);
-  scene.add( ambient );
+    // Initialize the scene.
+    scene = new THREE.Scene();
 
-  var directionalLight = new THREE.DirectionalLight(DIRECTIONAL_LIGHT_COLOR);
-  directionalLight.position.set(0, 0, 1).normalize();
-  scene.add(directionalLight);
+    var ambient = new THREE.AmbientLight(AMBIENT_LIGHT_COLOR);
+    scene.add( ambient );
 
-  // Initialize the model.
-  var onProgress = function (xhr) {
-    if (xhr.lengthComputable) {
-      //var percentComplete = xhr.loaded / xhr.total * 100;
-      //console.log(Math.round(percentComplete, 2) + '% downloaded');
-    }
-  };
+    var directionalLight = new THREE.DirectionalLight(DIRECTIONAL_LIGHT_COLOR);
+    directionalLight.position.set(0, 0, 1).normalize();
+    scene.add(directionalLight);
 
-  var onError = function (xhr) { };
+    // Initialize the model.
+    var onProgress = function (xhr) {
+      if (xhr.lengthComputable) {
+        //var percentComplete = xhr.loaded / xhr.total * 100;
+        //console.log(Math.round(percentComplete, 2) + '% downloaded');
+      }
+    };
 
-  THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
+    var onError = function (xhr) { };
 
-  var mtlLoader = new THREE.MTLLoader();
-  mtlLoader.setPath('2004_120991_014_3D_model/');
-  mtlLoader.load('120991_014.mtl', function(materials) {
-    materials.preload();
+    THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
 
-    var objLoader = new THREE.OBJLoader();
-    objLoader.setMaterials(materials);
-    objLoader.setPath('2004_120991_014_3D_model/');
-    objLoader.load('120991_014.OBJ', function(object) {
-      // Find the object's bounding box in order to compute the camera Z.
-      var bbox = new THREE.Box3().setFromObject(object);
-      var maxBound = Math.max(bbox.max.x, bbox.max.y);
-      var fov = camera.fov * (Math.PI / 180);
-      var distance = Math.abs(maxBound / Math.sin(fov / 2));
-      // distance / 2.0 will fill the view. Pull back a bit.
-      camera.position.x = object.position.y + (distance / (2.0 - 0.12));
-      object.position.y = - bbox.max.y / 2;
-      scene.add(object);
-    }, onProgress, onError);
-  });
+    var mtlLoader = new THREE.MTLLoader();
+    mtlLoader.setPath('2004_120991_014_3D_model/');
+    mtlLoader.load('120991_014.mtl', function(materials) {
+      materials.preload();
 
-  renderer = new THREE.WebGLRenderer();
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  container.appendChild(renderer.domElement);
+      var objLoader = new THREE.OBJLoader();
+      objLoader.setMaterials(materials);
+      objLoader.setPath('2004_120991_014_3D_model/');
+      objLoader.load('120991_014.OBJ', function(object) {
+        // Find the object's bounding box in order to compute the camera Z.
+        var bbox = new THREE.Box3().setFromObject(object);
+        var maxBound = Math.max(bbox.max.x, bbox.max.y);
+        var fov = camera.fov * (Math.PI / 180);
+        var distance = Math.abs(maxBound / Math.sin(fov / 2));
+        // distance / 2.0 will fill the view. Pull back a bit.
+        camera.position.x = object.position.y + (distance / (2.0 - 0.12));
+        object.position.y = - bbox.max.y / 2;
+        scene.add(object);
+      }, onProgress, onError);
+    });
 
-  controls = new THREE.OrbitControls(camera, renderer.domElement);
+    renderer = new THREE.WebGLRenderer();
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    container.appendChild(renderer.domElement);
 
-  window.addEventListener('resize', onWindowResize, false);
-}
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-function onWindowResize() {
-  windowHalfX = window.innerWidth / 2;
-  windowHalfY = window.innerHeight / 2;
+    window.addEventListener('resize', onWindowResize, false);
+  }
 
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
+  function onWindowResize() {
+    windowHalfX = window.innerWidth / 2;
+    windowHalfY = window.innerHeight / 2;
 
-  renderer.setSize(window.innerWidth, window.innerHeight);
-}
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
 
-function animate() {
-  requestAnimationFrame(animate);
-  controls.update();
-  render();
-}
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  }
 
-function render() {
-  renderer.render(scene, camera);
+  function render() {
+    renderer.render(scene, camera);
+  }
+
 }
