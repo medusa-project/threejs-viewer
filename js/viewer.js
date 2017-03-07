@@ -19,8 +19,6 @@ function ThreeJSViewer(options) {
       options.directionalLightColor : 0xffffff;
 
   var camera, controls, scene, renderer;
-  var windowHalfX = window.innerWidth / 2;
-  var windowHalfY = window.innerHeight / 2;
 
   init();
   animate();
@@ -35,10 +33,17 @@ function ThreeJSViewer(options) {
     return document.getElementById(CONTAINER_ID);
   }
 
+  function getHeight() {
+    return window.innerHeight;
+  };
+
+  function getWidth() {
+    return window.innerWidth;
+  };
+
   function init() {
     // Initialize the camera.
-    camera = new THREE.PerspectiveCamera(45,
-      window.innerWidth / window.innerHeight, 1, 2000);
+    camera = new THREE.PerspectiveCamera(45, getWidth() / getHeight(), 1, 2000);
 
     // Initialize the scene.
     scene = new THREE.Scene();
@@ -85,7 +90,7 @@ function ThreeJSViewer(options) {
 
     renderer = new THREE.WebGLRenderer();
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(getWidth(), getHeight());
     getContainer().appendChild(renderer.domElement);
 
     controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -94,13 +99,13 @@ function ThreeJSViewer(options) {
   }
 
   function onWindowResize() {
-    windowHalfX = window.innerWidth / 2;
-    windowHalfY = window.innerHeight / 2;
+    var width = getWidth();
+    var height = getHeight();
 
-    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.aspect = width / height;
     camera.updateProjectionMatrix();
 
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(width, height);
   }
 
   function render() {
