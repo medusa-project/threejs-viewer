@@ -1,0 +1,1123 @@
+// Copyright 2005 Kaon Interactive Inc. Application-Level JavaScript
+BGCOLOR_3D=["RGB",0.0, 0.0, 0.0] // Background color of the 3D window
+BULLET_CHARACTER='\u2022'
+BULLET_COLOR=["RGB", 240/255, 200/255, 20/255 ]
+COMPRESSION_JPEG_SUBSAMPLING=411 // This property is export-time only
+COMPRESSION_TEXTURE_SIZE_LIMIT_MPELS=6 // This property is export-time only. Using values larger than 6 can cause performance issues on some 32M graphic accelerators.
+COMPRESSION_USE_PRESET_SCALE=true // This property is export-time only
+DYNAMIC_CONTENT_CLASSES=[ 'AppControlSection.Elevator', 'AppControlSection.Features', 'AppControlSection.Services', 'AppControlSection.Pricing', 'AppControlSection.HowToBuy', 'AppControlSection.Advantages' ] // This property is export-time only.
+DYNAMIC_CONTENT_DEFAULT_ALIGNMENT='left'
+DYNAMIC_CONTENT_DEFAULT_FONT=['Arial', 'sans-serif']
+DYNAMIC_CONTENT_DEFAULT_FONT_SIZE=9
+DYNAMIC_CONTENT_DEFAULT_TEXT_COLOR=color.black
+DYNAMIC_CONTENT_LINE_NUMBER=20
+EHL_IGNORE_FLATTEN=false // Export-time property. Ignore flatten parameter of EHL to improve EHL appearance by the cost of slight discrepancy between PDF model and Master Model.
+EHL_SEGMENTS_RATIO=1.0 // This property is export-time only. Decrease the number of EHL segments by this factor to improve performance and EHL appearance.
+HAS_DYNAMIC_CONTENT=true
+HAS_ENHANCED_TOOLBAR=true
+HAS_MENU=true
+HAS_POPUPS=true
+HAS_TITLE=true
+HAS_TOOLBAR=true
+HOTSPOT_COLOR=['RGB', 247/255, 199/255, 67/255 ] // Use 'null' not to change color of HOTSPOT_TEXTURE. Can't be changed at runtime
+HOTSPOT_KEEP_POPUP=false // Keep hotspot's popup on the page after the mouse cursor moved off the hotspot
+HOTSPOT_RESCALING_POWER=0.5 // 0.0 - hotspots are not rescaled, 0.5 - hotspots will become smaller and larger accordingly to the zoom level but not in the same degree as the entire model does, 1.0 means hotspots will never change their visual size
+HOTSPOT_SCALE=0.25 // Use this scale to change the initial hotspot size, generated according to the HOTSPOT_VISIBLE_RADIUS property
+HOTSPOT_TEXTURE="HotspotTexture.png" // Can't be changed at runtime
+HOTSPOT_TRANSPARENCY=0.75 // 0.0 - entirely transparent, 1.0 - entirely opaque, null - use alpha channel of HOTSPOT_TEXTURE
+HOTSPOT_VISIBLE_RADIUS=2.0 // Percent of the initial view's width. Can't be changed at runtime, use HOTSPOT_SCALE instead.
+IMAGE_MeasureButtonOff="MeasureOff.png"
+IMAGE_MeasureButtonOn="MeasureOn.png"
+IMAGE_MoveButtonOff="MoveOff.png"
+IMAGE_MoveButtonOn="MoveOn.png"
+IMAGE_PATH=""
+IMAGE_ResetButton="Reset.png"
+IMAGE_TurnButtonOff="TurnOff.png"
+IMAGE_TurnButtonOn="TurnOn.png"
+IMAGE_ZoomInButton="ZoomIn.png"
+IMAGE_ZoomOutButton="ZoomOut.png"
+MEASURE_TOOL_FONT=font.HelvB
+MEASURE_TOOL_FONT_SIZE=10
+MEASURE_TOOL_TEXT_COLOR=color.blue
+MEASURE_TOOL_UNIT=1
+MENU_CONTROL_CLASS=['AppControl','AppControlColor'] // This property is export-time only.
+MENU_CONTROL_IGNORE_SUBGROUPS=['AppControlColor'] // This property is export-time only.
+MENU_FONT=font.HelvB // font.Times, font.Helv, font.Cour with B(bold) and/or I(italics) suffices
+MENU_FONT_SIZE=12 // Font size in points
+MENU_INNER_GAP=0 // Distance between menu items
+MENU_ITEM_BGCOLOR=['T']
+MENU_ITEM_COLOR=["RGB", 0, 20/255, 180/255 ]
+MENU_ITEM_COLOR_DISABLED=["RGB", 220/255, 220/255, 220/255 ]
+MENU_ITEM_HEIGHT=18
+MENU_ITEM_HIGHLIGHT=highlight.n // highlight.n - None, highlight.i - Inverse color, highlight.o - Outline, highlight.p - Push
+MENU_LEFT_GAP=0 // Distance from the left edge of the page to the menu item
+MENU_ON_THE_LEFT=true // Is menu on the left or right side of the page
+MENU_UPPER_GAP=50 // Distance from the left upper corner of the 3D field to the first menu item
+MOVE_RATE=0.02 // Portion of the screen-width per click
+MSG_ALERT_MESSAGE_1='This document requires Adobe Reader 7.0 or later. Please upgrade to the latest version.'
+MSG_ALERT_MESSAGE_2='To interact with this 3D PDF, visit www.adobe.com and upgrade to Adobe Reader 7 for FREE!'
+MSG_CENTIMETERS='Centimeters'
+MSG_CLICK_AND_DRAG_TO_MEASURE='Click and Drag to Measure'
+MSG_HOTSPOTS='Hotspots'
+MSG_INCHES='Inches'
+MSG_MEASURE_IN_CENTIMETERS='Measure in Centimeters'
+MSG_MEASURE_IN_INCHES='Measure in Inches'
+MSG_RESET='Reset'
+ORI_PHI=0
+ORI_PSI=0
+ORI_THETA=0
+POPUP_ALIGNMENT='center'
+POPUP_BGCOLOR=['RGB', 250/255, 240/255, 128/255 ]
+POPUP_BORDER_COLOR=color.black
+POPUP_BORDER_WIDTH=1
+POPUP_COUNT=24
+POPUP_FONT=font.Helv
+POPUP_FONT_SIZE=10 // If set to 0, font size will be selected automatically to fit text into the box, but this works only for plain texts, not for the rich text content
+POPUP_HEIGHT=50
+POPUP_TEXT_COLOR=color.black
+POPUP_WIDTH=120
+ROTATION_RATE=5 // Degrees per click.
+RT_10='textSize = 10'
+RT_11='textSize = 11'
+RT_12='textSize = 12'
+RT_14='textSize = 14'
+RT_16='textSize = 16'
+RT_8='textSize = 8'
+RT_9='textSize = 9'
+RT_BLUE='textColor = color.blue'
+RT_BOLD='fontWeight = 700'
+RT_BULLET2='<indent>\u2022'
+RT_BULLET3='<indent><indent>\u2022'
+RT_BULLET='\u2022'
+RT_CENTER='alignment="center"'
+RT_COPYRIGHT='\u00a9'
+RT_GREEN='textColor = color.green'
+RT_INDENT=2
+RT_ITALIC='fontStyle = "italic"'
+RT_LEFT='alignment="left"'
+RT_RED='textColor = color.red'
+RT_RIGHT='alignment="right"'
+RT_SUB='subscript=true'
+RT_SUP='superscript=true'
+RT_TM='\u2122'
+SMOOTH_FADING=true // Set this property to 'false' to improve performance of a heavily-textured models
+SMOOTH_FADING_MATERIALS_LIMIT=8 // Don't apply smooth fading to objects having more than SMOOTH_FADING_MATERIALS_LIMIT materials to avoid performance degradation
+TITLE_ALIGNMENT="center"
+TITLE_BGCOLOR=color.white
+TITLE_COLOR=color.black
+TITLE_CONTROL_CLASS='AppControlProductTitle'
+TITLE_FONT=font.HelvB
+TITLE_FONT_SIZE=0
+TITLE_GAP=10
+TITLE_HEIGHT=40
+TOOLBAR_ALIGNMENT='center' // Valid values are 'center', 'left' or 'right'
+TOOLBAR_BUTTON=['ResetButton','MeasureButton','MoveButton','TurnButton','ZoomOutButton','ZoomInButton'] // Buttons names must not be changed
+TOOLBAR_BUTTON_ACTION=new Array()
+TOOLBAR_BUTTON_ACTION['MeasureButton']=""
+TOOLBAR_BUTTON_ACTION['MoveButton']="this.doc.getAnnots3D(%1)[ 0 ].context3D.setCurrentTool('Pan')"
+TOOLBAR_BUTTON_ACTION['ResetButton']="this.doc.getAnnots3D(%1)[ 0 ].context3D.resetUnconditionally()"
+TOOLBAR_BUTTON_ACTION['TurnButton']="this.doc.getAnnots3D(%1)[ 0 ].context3D.setCurrentTool('Rotate')"
+TOOLBAR_BUTTON_ACTION['ZoomInButton']="this.doc.getAnnots3D(%1)[ 0 ].context3D.zoomIn()"
+TOOLBAR_BUTTON_ACTION['ZoomOutButton']="this.doc.getAnnots3D(%1)[ 0 ].context3D.zoomOut()"
+TOOLBAR_BUTTON_HAS_ALT=new Array()
+TOOLBAR_BUTTON_HAS_ALT['MeasureButton']=true
+TOOLBAR_BUTTON_HAS_ALT['MoveButton']=true
+TOOLBAR_BUTTON_HAS_ALT['ResetButton']=false
+TOOLBAR_BUTTON_HAS_ALT['TurnButton']=true
+TOOLBAR_BUTTON_HAS_ALT['ZoomInButton']=false
+TOOLBAR_BUTTON_HAS_ALT['ZoomOutButton']=false
+TOOLBAR_BUTTON_TOOLTIP=new Array()
+TOOLBAR_BUTTON_TOOLTIP['MeasureButton']='Measure'
+TOOLBAR_BUTTON_TOOLTIP['MoveButton']='Move'
+TOOLBAR_BUTTON_TOOLTIP['ResetButton']='Reset'
+TOOLBAR_BUTTON_TOOLTIP['TurnButton']='Turn'
+TOOLBAR_BUTTON_TOOLTIP['ZoomInButton']='Zoom In'
+TOOLBAR_BUTTON_TOOLTIP['ZoomOutButton']='Zoom Out'
+TOOLBAR_ICON_GAP=0
+TOOLBAR_ICON_HEIGHT=241
+TOOLBAR_ICON_SCALE=0.15
+TOOLBAR_ICON_WIDTH=new Array()
+TOOLBAR_ICON_WIDTH['MeasureButton']=250
+TOOLBAR_ICON_WIDTH['MoveButton']=250
+TOOLBAR_ICON_WIDTH['ResetButton']=245
+TOOLBAR_ICON_WIDTH['TurnButton']=249
+TOOLBAR_ICON_WIDTH['ZoomInButton']=132
+TOOLBAR_ICON_WIDTH['ZoomOutButton']=113
+TOOLBAR_MINIBUTTON_MoveDown=[ 0.333, 0.667, 0.667, 1]
+TOOLBAR_MINIBUTTON_MoveLeft=[ 0, 0.333, 0.333, 0.667]
+TOOLBAR_MINIBUTTON_MoveRight=[ 0.667, 0.333, 1, 0.667]
+TOOLBAR_MINIBUTTON_MoveUp=[ 0.333, 0, 0.667, 0.333 ]
+TOOLBAR_MINIBUTTON_TurnDown=[ 0.333, 0.667, 0.667, 1]
+TOOLBAR_MINIBUTTON_TurnLeft=[ 0, 0.333, 0.333, 0.667]
+TOOLBAR_MINIBUTTON_TurnRight=[ 0.667, 0.333, 1, 0.667]
+TOOLBAR_MINIBUTTON_TurnUp=[ 0.333, 0, 0.667, 0.333 ]
+var properReaderVersion = true;
+var alertMessageName = "Alert Message";
+var alertMessage = null;
+var MSG_ALERT_MESSAGE_1 = "This document requires Adobe Reader 7.0 or later. Please upgrade to the latest version.";
+var MSG_ALERT_MESSAGE_2 = "To interact with this 3D PDF, visit www.adobe.com and upgrade to Adobe Reader 7 for FREE!";
+var PATENT_INFO_TEXT = "US Patent 7,079,139";
+var PATENT_INFO_FONT = "Helv";
+var PATENT_INFO_FONT_SIZE = 8;
+var VIEWER_TYPE = app.viewerType;
+var POPULATE_FIELDS = true;
+var CREATE_TEMPLATE_PDF = false;
+var IN_TEMPLATE = false;
+var FIRST_RUN_FLAG = true;
+var upperLeftCornerX, upperLeftCornerY, lowerRightCornerX, lowerRightCornerY, toolbarButtonX, toolbarButtonY;
+var menuItemX, menuItemY, menuItemWidth, menuItemHeight;
+var toolbar = new Array();
+var interval;
+var annotation = null;
+var annotationX = null;
+var currentAnnotIndex = -1;
+var currentAnnotID = "";
+var pageNo;
+var colr = null;
+var menuItems = new Array();
+var menuItemTextFields = new Array();
+var menuItemNames = new Array();
+var menuItemsCreated = false;
+var currentItemNo;
+var measurement = null;
+var isRunning = false;
+var RICH_CONTENT = new Array();
+var dynamicContentPopulated = false;
+var parametersSet = false;
+var FPS = null;
+var oldFPS = 0;
+
+if ( app.viewerVersion != undefined && app.viewerVersion<7.0 )
+{
+    properReaderVersion = false;
+    app.alert(MSG_ALERT_MESSAGE_1);
+    if ( app.viewerVersion>=6.0 )
+        app.execMenuItem("Updates");
+    else
+        app.execMenuItem("AdobeOnline");
+}
+
+if ( !properReaderVersion )
+{
+   for( j=0; j<this.numFields; j++)
+   {
+        var fieldName = this.getNthFieldName(j);
+        if ( fieldName!="" && fieldName!=alertMessageName)
+        {
+            var field = this.getField(fieldName);
+            field.hidden = true;
+        }
+   }
+    alertMessage = this.getField(alertMessageName);
+    alertMessage.hidden = false;
+}
+
+if ( properReaderVersion )
+{
+    for( pageNo=0; pageNo<this.numPages; pageNo++)
+        if ( this.getAnnots3D( pageNo )!= null ) break;
+    app.execMenuItem("ActualSize");
+    interval = app.setInterval("try { poll(); } catch(error) { }", 100);
+    FIRST_RUN_FLAG = (this.getField("ChangeLock")==null);
+    if ( FIRST_RUN_FLAG && VIEWER_TYPE!="Reader" )
+    {
+        var changeLockFlag = this.addField({
+            nPageNum:pageNo,
+            cName:"ChangeLock",
+            cFieldType:"text",
+            oCoords:[ 0, 1, 1, 0 ],
+            });
+        changeLockFlag.readOnly = true;
+        changeLockFlag.display = display.hidden;
+    }
+}
+
+function poll()
+{
+    if (this.pageNum != pageNo) return;
+    if ( !this.getAnnots3D( pageNo )[ 0 ].activated ) return;
+    isRunning = true;
+    var c3d = this.getAnnots3D( pageNo )[ 0 ].context3D;
+    if ( c3d != undefined )
+    {
+        if ( c3d.REQUEST_FIELDS_CHANGE!=null )
+        {
+    	    var ID = c3d.REQUEST_FIELDS_CHANGE;
+            c3d.REQUEST_FIELDS_CHANGE = null;
+            changeFields(c3d, ID);
+        }
+        if ( c3d.MESSAGE!=null )
+        {
+            app.alert(c3d.MESSAGE);
+            c3d.MESSAGE = null;
+        }
+        if ( !parametersSet )
+        {
+	    this.getAnnots3D(pageNo)[0].activated=false; this.getAnnots3D(pageNo)[0].activated=true; // Just a workaround of Adobe Reader 9.3.2 bug
+            c3d.ROTATION_RATE = ROTATION_RATE;
+            c3d.MOVE_RATE = MOVE_RATE;
+            c3d.MSG_RESET = MSG_RESET;
+            c3d.HOTSPOT_VISIBLE_RADIUS = HOTSPOT_VISIBLE_RADIUS;
+            c3d.HOTSPOT_RESCALING_POWER = HOTSPOT_RESCALING_POWER;
+            c3d.HOTSPOT_SCALE = HOTSPOT_SCALE;
+            c3d.SMOOTH_FADING = SMOOTH_FADING;
+            c3d.SMOOTH_FADING_MATERIALS_LIMIT = SMOOTH_FADING_MATERIALS_LIMIT;
+            c3d.HOTSPOT_KEEP_POPUP = HOTSPOT_KEEP_POPUP;
+            FPS = this.getField("FPS");
+            parametersSet = true;
+        }
+        if ( FPS!=null && c3d.FPS!=oldFPS )
+        {
+            FPS.value = "FPS "+c3d.FPS;
+            oldFPS = c3d.FPS;
+        }
+        if ( !menuItemsCreated )
+            createMenuItems();
+        if ( !dynamicContentPopulated )
+        {
+            populateDynamicContent();
+            populateAppControlDescription();
+        }
+        // Tooltips can change according to the current model conditions
+        if ( c3d.REFRESH_TOOLTIPS )
+        {
+            for( j=0; j<currentItemNo; j++)
+            {
+				if ( menuItems[j]!=null )
+				{
+	                var tooltip = this.getAnnots3D( pageNo )[ 0 ].context3D.getCurrentTooltip( j+1 );
+	                if ( tooltip!=undefined && tooltip!="" )
+	                {
+	                    menuItems[j].userName = tooltip; // Sic! userName should be used to set tooltip
+	                    if ( menuItemTextFields[j]!=null )
+	                        menuItemTextFields[j].textColor = menuItems[j].textColor;
+	                }
+	                else
+	                {
+	                    menuItems[j].userName = "";
+	                    if ( menuItemTextFields[j]!=null )
+	                    {
+	                        menuItemTextFields[j].textColor = MENU_ITEM_COLOR_DISABLED;
+	                    }
+	                }
+				}
+            }
+            c3d.REFRESH_TOOLTIPS = false;
+        }
+        if ( colr==null ) initColor();
+        if ( annotation==null ) initAnnot();
+        if ( HAS_TITLE) initTitle();
+        if ( alertMessage==null ) initAlert();
+        if ( HAS_POPUPS && c3d.SHOW_ANNOTATION && (currentAnnotIndex==-1 || currentAnnotIndex!=c3d.ANNOTATION_INDEX))
+        {
+            if (currentAnnotIndex!=-1 && annotation[currentAnnotIndex]!=null )
+                annotation[currentAnnotIndex].display = display.hidden;
+            currentAnnotIndex = c3d.ANNOTATION_INDEX;
+            if ( currentAnnotIndex < 0 ) currentAnnotIndex = 0; // Index is undefined, use the first popup
+            currentAnnotIndex = currentAnnotIndex % POPUP_COUNT;
+            if ( annotation[currentAnnotIndex]==null )
+                app.alert("Popup Field not found");
+            else
+            {
+                if ( c3d.ANNOTATION_RICH_CONTENTS==undefined || c3d.ANNOTATION_RICH_CONTENTS=="" )
+                {
+                    annotation[currentAnnotIndex].value = getStringValue(c3d); // Probably is a Unicode string
+                }
+                else
+                {
+                    var richContent = getRichContent(c3d.ANNOTATION_ID, true);
+                    annotation[currentAnnotIndex].richText = true;
+                    annotation[currentAnnotIndex].richValue = richContent;
+                }
+                currentAnnotID = c3d.ANNOTATION_ID;
+                if ( c3d.ANNOTATION_SCRIPT!=null )
+                {
+                    annotation[currentAnnotIndex].action = "c3d.startScript('"+c3d.ANNOTATION_SCRIPT+"');";
+                }
+                annotation[currentAnnotIndex].display = display.noPrint;
+            }
+        }
+        if ( HAS_POPUPS && !c3d.SHOW_ANNOTATION && currentAnnotIndex != -1)
+        {
+            if ( annotation[currentAnnotIndex]!=null )
+                annotation[currentAnnotIndex].display = display.hidden;
+            currentAnnotIndex = -1;
+            currentAnnotID = "";
+        }
+        if ( c3d.LAUNCH_URL!=null )
+        {
+            app.launchURL( c3d.LAUNCH_URL );
+            c3d.LAUNCH_URL = null;
+        }
+        if ( c3d.FPS_AVERAGE != null )
+        {
+            app.alert("Average FPS for the recent "+c3d.FPS_PERIOD+" seconds is "+c3d.FPS_AVERAGE);
+            c3d.FPS_AVERAGE = null;
+        }
+        if ( c3d.SWITCH_TO_ROTATE_MODE )
+        {
+            if ( toolbar["TurnButton"]!=undefined )
+                toolbar["TurnButton"].press();
+            c3d.SWITCH_TO_ROTATE_MODE = false;
+        }
+        if ( measurement!=null )
+			displayMeasurement();
+    }
+}
+
+function displayMeasurement()
+{
+    var c3d = this.getAnnots3D( pageNo )[ 0 ].context3D;
+    if ( c3d != undefined )
+		if ( c3d.CURRENT_MEASUREMENT != "" )
+		{
+	        measurement.textColor = MEASURE_TOOL_TEXT_COLOR;
+	        measurement.textSize = MEASURE_TOOL_FONT_SIZE; // Font size in points
+	        measurement.textFont = MEASURE_TOOL_FONT;
+			var dist = c3d.CURRENT_MEASUREMENT;
+			if ( isNaN(dist) )
+				measurement.value = c3d.CURRENT_MEASUREMENT;
+			else
+			{
+				if ( c3d.MEASUREMENT_UNIT=="inch" )
+				{
+					dist /= 25.41;
+					dist = Math.round( dist*10 )/10;
+					measurement.value = dist+" "+MSG_INCHES;
+				}
+				if ( c3d.MEASUREMENT_UNIT=="centimeter" )
+				{
+					dist /= 10;
+					dist = Math.round( dist*10 )/10;
+					measurement.value = dist+" "+MSG_CENTIMETERS;
+				}
+			}
+			measurement.display = display.noPrint;
+		}
+		else
+		{
+	        measurement.textColor = color.ltGray;
+	        measurement.textSize = PATENT_INFO_FONT_SIZE; // Font size in points
+	        measurement.textFont = PATENT_INFO_FONT;
+			measurement.value = PATENT_INFO_TEXT;
+		}
+}
+
+function initColor()
+{
+    var c3d = this.getAnnots3D( pageNo )[ 0 ].context3D;
+    colr = color.convert( BGCOLOR_3D, "RGB" );
+    c3d.__DEFAULT_BGR_COLOR_R__ = colr[1]; // red
+    c3d.__DEFAULT_BGR_COLOR_G__ = colr[2]; // green
+    c3d.__DEFAULT_BGR_COLOR_B__ = colr[3]; // blue
+    c3d.SET_BGCOLOR = true;
+    c3d.refresh();
+}
+
+function initAnnot()
+{
+    if ( !HAS_POPUPS ) return;
+    if ( POPUP_COUNT<=0 ) return;
+    var c3d = this.getAnnots3D( pageNo )[ 0 ].context3D;
+    if ( !IN_TEMPLATE && !CREATE_TEMPLATE_PDF )
+        POPUP_COUNT = c3d.HOTSPOT_COUNT;
+    var x0 = this.getAnnots3D( pageNo )[ 0 ].rect[0];
+    var y0 = this.getAnnots3D( pageNo )[ 0 ].rect[1];
+    var x1 = this.getAnnots3D( pageNo )[ 0 ].rect[2];
+    var step;
+    var x;
+    if ( POPUP_COUNT==1 )
+    {
+        x = x1-POPUP_WIDTH;
+        step = 0;
+    }
+    else
+    {
+        step = (x1-x0-POPUP_WIDTH)/(POPUP_COUNT-1);
+        x = x0;
+    }
+    annotation = new Array(POPUP_COUNT);
+    annotationX = new Array(POPUP_COUNT);
+    for( j=0; j<POPUP_COUNT; j++)
+    {
+        var isNewField = IN_TEMPLATE;
+        var popupName = "Popup_"+j;
+        var ann = this.getField(popupName);
+        if ( ann == null && VIEWER_TYPE!="Reader" && FIRST_RUN_FLAG )
+        {
+            ann = this.addField({
+                nPageNum:pageNo,
+                cName:popupName,
+                cFieldType:"text",
+                oCoords:[ x, y0+POPUP_HEIGHT, x+POPUP_WIDTH, y0 ],
+                });
+            isNewField = true;
+        }
+        if ( isNewField && ann!=null )
+        {
+            ann.fillColor = POPUP_BGCOLOR;
+            ann.textSize = POPUP_FONT_SIZE; // Font size in points
+            ann.textFont = POPUP_FONT;
+            ann.readonly = true;
+            ann.multiline = true;
+            ann.lineWidth = POPUP_BORDER_WIDTH; // Border width
+            ann.strokeColor = POPUP_BORDER_COLOR;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Deleted temporarily due to the bug in Adobe Reader 8.0, which throws some security violation exception in this assignment
+//            ann.alignment = POPUP_ALIGNMENT;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ann.textColor = POPUP_TEXT_COLOR;
+        }
+        if ( ann!=null )
+            ann.display = display.hidden;
+        annotation[j] = ann;
+        annotationX[j] = ((x-x0)+(POPUP_WIDTH/2))/(x1-x0);
+        x+=step;
+    }
+}
+
+function initAlert()
+{
+    var isNewField = IN_TEMPLATE;
+    alertMessage = this.getField(alertMessageName);
+    var c3d = this.getAnnots3D( pageNo )[ 0 ].context3D;
+    if ( alertMessage == null && VIEWER_TYPE!="Reader" && FIRST_RUN_FLAG )
+    {
+        var x0 = this.getAnnots3D( pageNo )[ 0 ].rect[0];
+        var y0 = this.getAnnots3D( pageNo )[ 0 ].rect[3];
+        var x1 = this.getAnnots3D( pageNo )[ 0 ].rect[2];
+        var y1 = y0-40;
+        alertMessage = this.addField({
+            nPageNum:pageNo,
+            cName:alertMessageName,
+            cFieldType:"text",
+            oCoords:[ x0, y0, x1, y1 ],
+            });
+        isNewField = true;
+    }
+    if ( alertMessage==null ) return;
+    if ( isNewField )
+    {
+        alertMessage.textColor = color.red;
+        alertMessage.fillColor = color.yellow;
+        alertMessage.textSize = 12;
+        alertMessage.textFont = font.HelvB;
+        alertMessage.readonly = true;
+        alertMessage.multiline = true;
+        alertMessage.hidden = true;
+    }
+    alertMessage.value=MSG_ALERT_MESSAGE_2;
+}
+
+function initTitle()
+{
+    var isNewField = IN_TEMPLATE;
+    if ( HAS_TITLE )
+    {
+        var c3d = this.getAnnots3D( pageNo )[ 0 ].context3D;
+        var titleField = this.getField("Model Title");
+        if ( titleField == null && VIEWER_TYPE!="Reader" && FIRST_RUN_FLAG )
+        {
+            var x0 = this.getAnnots3D( pageNo )[ 0 ].rect[0];
+            var y0 = this.getAnnots3D( pageNo )[ 0 ].rect[1];
+            var x1 = this.getAnnots3D( pageNo )[ 0 ].rect[2];
+            var titleY0 = y0+TITLE_HEIGHT+TITLE_GAP;
+            var titleY1 = y0+TITLE_GAP;
+            if ( POPUP_COUNT>0 )
+            {
+                titleY0 += POPUP_HEIGHT;
+                titleY1 += POPUP_HEIGHT;
+            }
+            titleField = this.addField({
+                nPageNum:pageNo,
+                cName:"Model Title",
+                cFieldType:"text",
+                oCoords:[ x0, titleY0, x1, titleY1 ],
+                });
+            isNewField = true;
+        }
+        if ( titleField==null ) return; // VIEWER_TYPE==="Reader" and there is no "Model Title" field in the document
+        if ( isNewField )
+        {
+            titleField.fillColor = TITLE_BGCOLOR;
+            titleField.textColor = TITLE_COLOR;
+            titleField.textSize = TITLE_FONT_SIZE; // Font size in points
+            titleField.textFont = TITLE_FONT;
+            titleField.readonly = true;
+            titleField.multiline = true;
+            titleField.lineWidth = 0;
+            if ( CREATE_TEMPLATE_PDF )
+                titleField.display = display.hidden;
+            else
+                titleField.display = display.visible;
+//            titleField.alignment = TITLE_ALIGNMENT;
+        }
+        c3d.getProductTitle();
+        titleField.value = getStringValue(c3d);
+        HAS_TITLE = false;
+    }
+}
+
+function initMeasurement()
+{
+    if ( !HAS_TOOLBAR ) return;
+    var isNewField = IN_TEMPLATE;
+    var x0 = toolbarButtonX;
+    var y0 = toolbarButtonY - TOOLBAR_ICON_HEIGHT*TOOLBAR_ICON_SCALE*3/4;
+    var annotName = "Display Measurement";
+    var hideName = annotName+"_hide";
+    measurement = this.getField(annotName);
+    if ( VIEWER_TYPE!="Reader" && measurement==null && FIRST_RUN_FLAG )
+    {
+        measurement = this.addField({
+            nPageNum:pageNo,
+            cName:annotName,
+            cFieldType:"text",
+            oCoords:[ x0, y0+20, x0+130, y0 ],
+            });
+        overMeasurement = this.addField({ // This field is necessary only to hide the text field from user changes
+            nPageNum:pageNo,
+            cName:hideName,
+            cFieldType:"button",
+            oCoords:[ x0, y0+20, x0+130, y0 ],
+            });
+        isNewField = true;
+    }
+    if ( isNewField )
+    {
+        overMeasurement.fillColor = ["T"];
+        overMeasurement.highlight = highlight.n;
+        measurement.fillColor = [ "T" ];
+        measurement.multiline = false;
+        measurement.lineWidth = 1; // Border width
+//        measurement.alignment = "left";
+    }
+	measurement.textColor = color.ltGray;
+	measurement.textSize = PATENT_INFO_FONT_SIZE; // Font size in points
+	measurement.textFont = PATENT_INFO_FONT;
+	measurement.value = PATENT_INFO_TEXT;
+	measurement.display = display.noPrint;
+}
+
+function startMenuItems()
+{
+    upperLeftCornerX = this.getAnnots3D( pageNo )[ 0 ].rect[0];
+    upperLeftCornerY = this.getAnnots3D( pageNo )[ 0 ].rect[1];
+    menuItemY = upperLeftCornerY - MENU_UPPER_GAP;
+    menuItemHeight = Math.max( MENU_ITEM_HEIGHT, MENU_FONT_SIZE + 6 );
+    if ( MENU_ON_THE_LEFT )
+    {
+        menuItemX = MENU_LEFT_GAP;
+        menuItemWidth = upperLeftCornerX - MENU_LEFT_GAP;
+    }
+    else
+    {
+        lowerRightCornerX = this.getAnnots3D( pageNo )[ 0 ].rect[2];
+        pageWidth = this.getPageBox()[2];
+        menuItemX = lowerRightCornerX+MENU_LEFT_GAP;
+        menuItemWidth = pageWidth - lowerRightCornerX - MENU_LEFT_GAP;
+    }
+    currentItemNo = 0;
+}
+
+function createTemplateMenu( n )
+{
+    for( j=0; j<n; j++ )
+        addMenuItem( j, "Control_"+j, false);
+}
+
+function addMenuItem( j, menuItem, visible )
+{
+    POPULATE_FIELDS = IN_TEMPLATE;
+    if ( !HAS_MENU ) return;
+    var linkName = "Control_"+currentItemNo;
+    var itemName = linkName+"_text";
+    var bulletName = linkName+"_bullet";
+    var item = this.getField( itemName );
+    var link = this.getField( linkName );
+    var bullet = this.getField( bulletName );
+    if ( link==null && VIEWER_TYPE!="Reader"  && FIRST_RUN_FLAG )
+    {
+        if ( item!=null )
+            this.removeField(itemName);
+        if ( bullet!=null )
+            this.removeField(bulletName);
+        var bulletRect = [ menuItemX, menuItemY, menuItemX+menuItemHeight, menuItemY-menuItemHeight ];
+        var rect = [ menuItemX+menuItemHeight, menuItemY, menuItemX+menuItemWidth, menuItemY-menuItemHeight ];
+        var linkRect = [ menuItemX, menuItemY, menuItemX+menuItemWidth, menuItemY-menuItemHeight ];
+        bullet = this.addField({
+            nPageNum:pageNo,
+            cName:bulletName,
+            cFieldType:"text",
+            oCoords:bulletRect,
+        });
+        item = this.addField({
+            nPageNum:pageNo,
+            cName:itemName,
+            cFieldType:"text",
+            oCoords:rect,
+        });
+        link = this.addField({
+            nPageNum:pageNo,
+            cName:linkName,
+            cFieldType:"button",
+            oCoords:linkRect,
+        });
+        POPULATE_FIELDS = true;
+    }
+    if ( POPULATE_FIELDS )
+    {
+        if ( item!=null )
+        {
+            if ( visible )
+                item.value = menuItem;
+            item.fillColor = MENU_ITEM_BGCOLOR;
+            item.textColor = MENU_ITEM_COLOR;
+            item.textSize = MENU_FONT_SIZE;
+            item.textFont = MENU_FONT;
+            item.fillColor = ["T"];
+            item.readonly = true;
+            item.multiline = true;
+            item.lineWidth = 0; // Border width
+            item.display = display.noPrint;
+        }
+        if ( link!=null )
+        {
+            var action = "execMenuItem("+j+");";
+            link.setAction("MouseUp", action);
+            link.fillColor = ["T"];
+            link.textColor = MENU_ITEM_COLOR;
+            link.highlight = MENU_ITEM_HIGHLIGHT;
+        }
+        if ( bullet!=null )
+        {
+            bullet.fillColor = ["T"];
+            bullet.value = BULLET_CHARACTER;
+            bullet.textColor = BULLET_COLOR;
+            bullet.textSize = MENU_FONT_SIZE+8;
+            bullet.readonly = true;
+            if ( visible )
+                bullet.display = display.noPrint;
+            else
+                bullet.display = display.hidden;
+        }
+    }
+    menuItems[currentItemNo] = link;
+    menuItemTextFields[currentItemNo] = item;
+    menuItemNames[currentItemNo] = menuItem;
+    menuItemY -= menuItemHeight + MENU_INNER_GAP;
+    currentItemNo++;
+}
+
+function createMenuItems()
+{
+    var c3d = this.getAnnots3D( pageNo )[ 0 ].context3D;
+    var n = c3d.getMenuCount()
+    for( j=1; j<n; j++) // Skip the first Reset menu item
+    {
+        c3d.getMenuItem(j);
+        var item = getStringValue(c3d);
+        addMenuItem( j, item, true);
+    }
+    menuItemsCreated = true;
+}
+
+function createToolbar()
+{
+    upperLeftCornerX = this.getAnnots3D( pageNo )[ 0 ].rect[0];
+    upperLeftCornerY = this.getAnnots3D( pageNo )[ 0 ].rect[1];
+    lowerRightCornerX = this.getAnnots3D( pageNo )[ 0 ].rect[2];
+    lowerRightCornerY = this.getAnnots3D( pageNo )[ 0 ].rect[3];
+    toolbarButtonY = lowerRightCornerY-3;
+    var toolbarLength = 0;
+    for( button in TOOLBAR_ICON_WIDTH )
+        toolbarLength += (TOOLBAR_ICON_SCALE*TOOLBAR_ICON_WIDTH[button] + TOOLBAR_ICON_GAP);
+    toolbarButtonX = (lowerRightCornerX+upperLeftCornerX)/2 - toolbarLength/2;
+    if ( TOOLBAR_ALIGNMENT=='left')
+        toolbarButtonX = upperLeftCornerX;
+    if ( TOOLBAR_ALIGNMENT=='right')
+        toolbarButtonX = lowerRightCornerX - toolbarLength;
+
+    for( n=0; n<TOOLBAR_BUTTON.length; n++)
+    {
+        var buttonName = TOOLBAR_BUTTON[n];
+        var buttonAction = TOOLBAR_BUTTON_ACTION[buttonName].replace("%1",pageNo);
+        toolbar[buttonName] = new ToolbarButton( this, buttonName, TOOLBAR_BUTTON_TOOLTIP[buttonName],
+            TOOLBAR_BUTTON_HAS_ALT[buttonName], buttonAction, TOOLBAR_ICON_WIDTH[buttonName]*TOOLBAR_ICON_SCALE, TOOLBAR_ICON_HEIGHT*TOOLBAR_ICON_SCALE );
+        toolbar[n] = toolbar[buttonName]; // Just for compatibility with old templates
+    }
+    initMeasurement();
+}
+
+function ToolbarButton( doc, name, tooltip, switchIcon, actionOnPress, width, height )
+{
+    var loadIcon = false;
+    this.doc = doc;
+    this.name = name;
+    this.tooltip = tooltip;
+    this.switchIcon = switchIcon;
+    this.actionOnPress = actionOnPress;
+    var nameOn = name+"On";
+    this.button = doc.getField( name );
+    this.buttonOn = doc.getField( nameOn );
+    if ( VIEWER_TYPE=="Reader" ) return;
+    if ( this.button==null && VIEWER_TYPE!="Reader" && FIRST_RUN_FLAG )
+    {
+        if ( this.buttonOn!=null )
+        {
+            this.doc.removeField(nameOn);
+            this.buttonOn = null;
+        }
+        var rect = [ toolbarButtonX, toolbarButtonY,
+                     toolbarButtonX+width, toolbarButtonY-height ];
+        var path = eval("IMAGE_PATH");
+        this.button = doc.addField({
+            nPageNum:pageNo,
+            cName:name,
+            cFieldType:"button",
+            oCoords:rect,
+        });
+        if ( switchIcon )
+            this.buttonOn = doc.addField({
+                nPageNum:pageNo,
+                cName:nameOn,
+                cFieldType:"button",
+                oCoords:rect,
+            });
+        if ( switchIcon )
+        {
+            this.button.buttonImportIcon( path+eval("IMAGE_"+name+"Off") );
+            this.buttonOn.buttonImportIcon( path+eval("IMAGE_"+name+"On") );
+        }
+        else
+        {
+            this.button.buttonImportIcon( path+eval("IMAGE_"+name));
+        }
+        if ( HAS_ENHANCED_TOOLBAR )
+        {
+            if ( name=="MoveButton" )
+                createMoveMiniButtons( rect, tooltip );
+            if ( name=="TurnButton" )
+                createTurnMiniButtons( rect, tooltip );
+        }
+    }
+    else
+        if ( this.button==null ) return;
+    var action = "toolbar['"+name+"'].press();"
+    this.button.lineWidth = 0; // Border width
+    this.button.highlight = highlight.n;
+    this.button.userName = tooltip;
+    this.button.buttonPosition = position.iconOnly;
+    this.button.buttonScaleHow = scaleHow.anamorphic;
+    this.button.buttonFitBounds = true;
+    this.button.strokeColor = ["T"];
+    this.button.setAction("MouseUp", action);
+    this.button.display = display.noPrint;
+    if ( HAS_ENHANCED_TOOLBAR )
+    {
+        if ( name=="MoveButton" )
+        {
+            this.doc.setButtonTooltip("Move Up",tooltip);
+            this.doc.setButtonTooltip("Move Right",tooltip);
+            this.doc.setButtonTooltip("Move Down",tooltip);
+            this.doc.setButtonTooltip("Move Left",tooltip);
+        }
+        if ( name=="TurnButton" )
+        {
+            this.doc.setButtonTooltip("Turn Up",tooltip);
+            this.doc.setButtonTooltip("Turn Right",tooltip);
+            this.doc.setButtonTooltip("Turn Down",tooltip);
+            this.doc.setButtonTooltip("Turn Left",tooltip);
+        }
+    }
+    if ( switchIcon )
+    {
+        this.buttonOn.lineWidth = 0; // Border width
+        this.buttonOn.highlight = highlight.n;
+        this.buttonOn.userName = tooltip;
+        this.buttonOn.buttonPosition = position.iconOnly;
+        this.buttonOn.buttonScaleHow = scaleHow.anamorphic;
+        this.buttonOn.buttonFitBounds = true;
+        this.buttonOn.strokeColor = ["T"];
+        this.buttonOn.setAction("MouseUp", action);
+        this.buttonOn.display = display.hidden;
+    }
+    toolbarButtonX += (width + TOOLBAR_ICON_GAP);
+}
+
+ToolbarButton.prototype.press = function()
+{
+    if ( isRunning && !this.doc.getAnnots3D( pageNo )[ 0 ].activated )
+        this.doc.getAnnots3D( pageNo )[ 0 ].activated = true;
+    var c3d = this.doc.getAnnots3D( pageNo )[ 0 ].context3D;
+    if ( this.switchIcon )
+    {
+        for( t in toolbar )
+            if ( toolbar[t].name!=this.name )
+                toolbar[t].setState( false );
+        this.setState(true);
+        if ( c3d!=undefined )
+            c3d.setMeasureMode( this.name=="MeasureButton", !c3d.SWITCH_TO_ROTATE_MODE );
+    }
+    else
+    {
+        if ( c3d.isMeasureMode() && this.name!="MeasureButton") // Zoom-in/out pressed while in Measure mode
+        {
+            toolbar["TurnButton"].press(); // Switch to rotate mode
+        }
+    }
+    try
+    {
+        eval( this.actionOnPress );
+    }
+    catch( exception ) {};
+}
+
+ToolbarButton.prototype.setState = function( state )
+{
+    if ( this.switchIcon && this.button!=null && this.buttonOn!=null )
+    {
+        if ( state )
+        {
+            this.buttonOn.display = display.noPrint;
+            this.button.display = display.hidden;
+        }
+        else
+        {
+            this.buttonOn.display = display.hidden;
+            this.button.display = display.noPrint;
+        }
+    }
+}
+
+function setButtonTooltip( name, tooltip )
+{
+    var button = this.getField(name);
+    if ( button!=null )
+        button.userName = tooltip;
+}
+
+function createTurnMiniButtons( rect, tooltip )
+{
+    createMiniButton( rect, "TurnUp", tooltip, "rotateView(0,ROTATION_RATE)" );
+    createMiniButton( rect, "TurnRight", tooltip, "rotateView(-ROTATION_RATE,0)" );
+    createMiniButton( rect, "TurnDown", tooltip, "rotateView(0,-ROTATION_RATE)" );
+    createMiniButton( rect, "TurnLeft", tooltip, "rotateView(ROTATION_RATE,0)" );
+}
+
+function createMoveMiniButtons( rect, tooltip )
+{
+    createMiniButton( rect, "MoveUp", tooltip, "moveView(0,-MOVE_RATE)" );
+    createMiniButton( rect, "MoveRight", tooltip, "moveView(MOVE_RATE,0)" );
+    createMiniButton( rect, "MoveDown", tooltip, "moveView(0,MOVE_RATE)" );
+    createMiniButton( rect, "MoveLeft", tooltip, "moveView(-MOVE_RATE,0)" );
+}
+
+function createMiniButton( rect, name, tooltip, action )
+{
+    var position = eval("TOOLBAR_MINIBUTTON_"+name);
+    var w = rect[2]-rect[0];
+    var h = rect[1]-rect[3];
+    var x0 = rect[0]+position[0]*w;
+    var y0 = rect[1]-position[1]*h;
+    var x1 = rect[0]+position[2]*w;
+    var y1 = rect[1]-position[3]*h;
+    var miniRect = [ x0, y0, x1, y1 ];
+    var mini = this.addField({
+            nPageNum:pageNo,
+            cName:name,
+            cFieldType:"button",
+            oCoords:miniRect,
+        });
+    mini.lineWidth = 0; // Border width
+    mini.highlight = highlight.n;
+    mini.userName = tooltip;
+    mini.strokeColor = ["T"];
+    mini.fillColor = ["T"];
+    mini.setAction("MouseUp", action );
+    mini.display = display.noPrint;
+}
+
+function rotateView( dTheta, dPhi )
+{
+    this.getAnnots3D( pageNo )[ 0 ].context3D.deleteMeasuringCursors();
+    this.getAnnots3D( pageNo )[ 0 ].context3D.rotateView(dTheta,dPhi);
+    toolbar["TurnButton"].press();
+}
+
+function moveView( cx, cy )
+{
+    this.getAnnots3D( pageNo )[ 0 ].context3D.deleteMeasuringCursors();
+    this.getAnnots3D( pageNo )[ 0 ].context3D.moveView(cx,cy);
+    toolbar["MoveButton"].press();
+}
+
+function execMenuItem( name )
+{
+    if ( isRunning && !this.getAnnots3D( pageNo )[ 0 ].activated )
+        this.getAnnots3D( pageNo )[ 0 ].activated = true;
+    this.getAnnots3D( pageNo )[ 0 ].context3D.execMenuItem(name);
+}
+
+if ( properReaderVersion )
+{
+    startMenuItems();
+    if ( HAS_TOOLBAR  ) createToolbar();
+}
+
+function getRichContent( id, popup )
+{
+    var richContent = RICH_CONTENT[id];
+    if ( richContent!=undefined ) return richContent;
+    var c3d = this.getAnnots3D( pageNo )[ 0 ].context3D;
+    var spans = new Array();
+    var nSpans = c3d.getSpanCount(id);
+    for( j=0; j<nSpans; j++)
+    {
+        var span = new Object();
+        c3d.getSpanText( id, j );
+        span.text = getStringValue(c3d);
+        if ( popup!=undefined )
+            if ( popup )
+            {
+//                span.alignment = POPUP_ALIGNMENT;
+                span.textColor = POPUP_TEXT_COLOR;
+                span.textSize = POPUP_FONT_SIZE;
+            }
+            else
+            {
+//                span.alignment = eval("DYNAMIC_CONTENT_DEFAULT_ALIGNMENT");
+                span.textColor = eval("DYNAMIC_CONTENT_DEFAULT_TEXT_COLOR");
+                span.textSize = eval("DYNAMIC_CONTENT_DEFAULT_FONT_SIZE");
+                span.fontFamily = eval("DYNAMIC_CONTENT_DEFAULT_FONT");
+            }
+        var nTags = c3d.getSpanTagCount( id, j );
+        for( l=0; l<nTags; l++)
+        {
+            var tag = c3d.getSpanTag( id, j, l );
+            var prop = "RT_"+tag;
+            prop = prop.toUpperCase();
+            var propValue = "";
+            try
+            {
+                propValue = eval(prop);
+            }
+            catch ( exception ) { propValue = "undefined" };
+            if ( propValue=="undefined" )
+                span.text= tag + span.text;
+            else
+            {
+                var indentString = "";
+                while ( propValue.indexOf("<indent>")==0 ) // Starts with <indent>
+                {
+                    var indent = eval("RT_INDENT");
+                    if ( indent!=undefined )
+                        for( sp=0; sp<indent; sp++)
+                            indentString = " "+indentString;
+                    propValue = propValue.substring(8);
+                }
+                if ( propValue.length<=2 ) // Just single Unicode character or two Unicode characters
+                {
+                    if ( propValue.length==1 ) // Just single Unicode character
+                        span.text = indentString + propValue+span.text;
+                    else
+                        span.text = indentString + propValue.charAt(0)+span.text+propValue.charAt(1);
+                }
+                else
+                {
+                    eval( "span."+propValue );
+                }
+            }
+        }
+        spans[j] = span;
+    }
+    for( k=j; k<DYNAMIC_CONTENT_LINE_NUMBER; k++)
+    {
+        var span = new Object();
+        span.text="\n";
+        spans[k] = span;
+    }
+    RICH_CONTENT[id] = spans;
+    return spans;
+}
+
+function getStringValue(c3d)
+{
+    var s = "";
+    for( m=0;;m++)
+    {
+        var c = c3d.getRequestedStringChar( m );
+        if ( c==null ) return s;
+        s += String.fromCharCode(c);
+    }
+}
+
+function populateDynamicContent()
+{
+    var c3d = this.getAnnots3D( pageNo )[ 0 ].context3D;
+    var identList = eval("DYNAMIC_CONTENT_CLASSES");
+    for( i=0; i<identList.length; i++)
+    {
+        var index = identList[i].indexOf('.');
+        if ( index < 0 ) continue; // Invalid syntax
+        var fieldName = identList[i].substring(index+1);
+        var id = c3d.getControlID(identList[i]);
+        if ( id != null )
+        {
+            var field = this.getField( fieldName );
+            if ( field!=null )
+            {
+                var content = getRichContent( id, false );
+                field.richText = true;
+                field.richValue = content;
+                field.readOnly = true;
+            }
+        }
+        else
+        {
+            var sectionTitle = this.getField( fieldName+"Title" );
+            if (sectionTitle!=null ) // Hide title if there is no such section
+                sectionTitle.hidden = true;
+        }
+
+    }
+    dynamicContentPopulated = true;
+}
+
+function changeFields( c3d, id )
+{
+   for( j=0; j<this.numFields; j++)
+   {
+        var fieldName = this.getNthFieldName(j);
+        if ( fieldName!="" )
+        {
+            var field = this.getField(fieldName);
+            var text = c3d.getFieldValue(id,fieldName);
+            if ( text!=undefined )
+                field.value = text;
+        }
+   }
+
+}
+
+function populateAppControlDescription()
+{
+    var c3d = this.getAnnots3D( pageNo )[ 0 ].context3D;
+    for( j=0; j<this.numFields; j++)
+    {
+        var fieldName = this.getNthFieldName(j);
+        if ( fieldName.indexOf(" ")!=-1 ) continue;
+        var value = c3d.getAppControlDescriptionField( fieldName );
+        if ( value!=null )
+        {
+            var field = this.getField(fieldName);
+            field.value = value;
+        }
+    }
+}
+
+if ( CREATE_TEMPLATE_PDF )
+{
+    createTemplateMenu(20);
+}
+
