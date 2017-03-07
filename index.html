@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<style>
-			body {
-				margin: 0px;
-			}
-		</style>
-	</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+      body {
+        margin: 0px;
+      }
+    </style>
+  </head>
 
-	<body>
-		<div id="viewer-container"></div>
-		<div>hi</div>
+  <body>
+    <div id="viewer-container"></div>
+    <div>hi</div>
 
-		<script src="js/three.js"></script>
-		<script src="js/OrbitControls.js"></script>
-		<script src="js/DDSLoader.js"></script>
-		<script src="js/MTLLoader.js"></script>
-		<script src="js/OBJLoader.js"></script>
-		<script src="js/Detector.js"></script>
-		<script src="js/viewer.js"></script>
+    <script src="js/three.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/DDSLoader.js"></script>
+    <script src="js/MTLLoader.js"></script>
+    <script src="js/OBJLoader.js"></script>
+    <script src="js/Detector.js"></script>
+    <script src="js/viewer.js"></script>
 
-		<script>
-    		new ThreeJSViewer({ 'containerId': 'viewer-container' });
-		</script>
-	</body>
+    <script>
+    		new ThreeJSViewer({
+          'containerId': 'viewer-container',
+          'modelPath': '2004_120991_014_3D_model/',
+					'objFile': '120991_014.OBJ',
+					'mtlFile': '120991_014.mtl'
+        });
+    </script>
+  </body>
 </html>

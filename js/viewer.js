@@ -4,6 +4,12 @@
  * @param {Object} options - Configuration options.
  * @param {string} options.containerId - ID of the element to which the viewer
  *                                       will be appended.
+ * @param {string} options.modelPath - URL path of the directory containing the
+ *                                     model files.
+ * @param {string} options.objFile - Filename of the OBJ model residing in
+ *                                   options.modelPath.
+ * @param {string} options.mtlFile - Filename of the MTL file residing in
+ *                                   options.modelPath.
  * @param {number} [options.ambientLightColor] - Ambient light color. Optional.
  *                                               Defaults to 0x808080.
  * @param {number} [options.directionalLightColor] - Directional light color.
@@ -17,6 +23,10 @@ function ThreeJSViewer(options) {
   var CONTAINER_ID = options.containerId;
   var DIRECTIONAL_LIGHT_COLOR = (options.directionalLightColor !== undefined) ?
       options.directionalLightColor : 0xffffff;
+  var MODEL_PATH = options.modelPath;
+  var MTL_FILE = options.mtlFile;
+  var OBJ_FILE = options.objFile;
+
 
   var camera, controls, scene, renderer;
 
@@ -49,7 +59,7 @@ function ThreeJSViewer(options) {
     scene = new THREE.Scene();
 
     var ambient = new THREE.AmbientLight(AMBIENT_LIGHT_COLOR);
-    scene.add( ambient );
+    scene.add(ambient);
 
     var directionalLight = new THREE.DirectionalLight(DIRECTIONAL_LIGHT_COLOR);
     directionalLight.position.set(0, 0, 1).normalize();
@@ -63,19 +73,19 @@ function ThreeJSViewer(options) {
       }
     };
 
-    var onError = function (xhr) { };
+    var onError = function (xhr) {};
 
     THREE.Loader.Handlers.add(/\.dds$/i, new THREE.DDSLoader());
 
     var mtlLoader = new THREE.MTLLoader();
-    mtlLoader.setPath('2004_120991_014_3D_model/');
-    mtlLoader.load('120991_014.mtl', function(materials) {
+    mtlLoader.setPath(MODEL_PATH);
+    mtlLoader.load(MTL_FILE, function(materials) {
       materials.preload();
 
       var objLoader = new THREE.OBJLoader();
       objLoader.setMaterials(materials);
-      objLoader.setPath('2004_120991_014_3D_model/');
-      objLoader.load('120991_014.OBJ', function(object) {
+      objLoader.setPath(MODEL_PATH);
+      objLoader.load(OBJ_FILE, function(object) {
         // Find the object's bounding box in order to compute the camera Z.
         var bbox = new THREE.Box3().setFromObject(object);
         var maxBound = Math.max(bbox.max.x, bbox.max.y);
@@ -104,7 +114,6 @@ function ThreeJSViewer(options) {
 
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
-
     renderer.setSize(width, height);
   }
 
