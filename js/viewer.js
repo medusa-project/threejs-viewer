@@ -1,7 +1,22 @@
-function ThreeJSViewer(containerId) {
+/**
+ * Instantiable viewer object.
+ *
+ * @param {Object} options - Configuration options.
+ * @param {string} options.containerId - ID of the element to which the viewer
+ *                                       will be appended.
+ * @param {number} [options.ambientLightColor] - Ambient light color. Optional.
+ *                                               Defaults to 0x808080.
+ * @param {number} [options.directionalLightColor] - Directional light color.
+ *                                                   Optional. Defaults to
+ *                                                   0xffffff.
+ */
+function ThreeJSViewer(options) {
 
-  var AMBIENT_LIGHT_COLOR = 0x808080;
-  var DIRECTIONAL_LIGHT_COLOR = 0xffffff;
+  var AMBIENT_LIGHT_COLOR = (options.ambientLightColor !== undefined) ?
+      options.ambientLightColor : 0x808080;
+  var CONTAINER_ID = options.containerId;
+  var DIRECTIONAL_LIGHT_COLOR = (options.directionalLightColor !== undefined) ?
+      options.directionalLightColor : 0xffffff;
 
   var camera, controls, scene, renderer;
   var windowHalfX = window.innerWidth / 2;
@@ -17,7 +32,7 @@ function ThreeJSViewer(containerId) {
   }
 
   function getContainer() {
-    return document.getElementById(containerId);
+    return document.getElementById(CONTAINER_ID);
   }
 
   function init() {
