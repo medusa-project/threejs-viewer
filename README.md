@@ -1,8 +1,9 @@
 # Project Layout
 
-* build/: Post-processed and minified JavaScript/CSS files
-* lib/: Third-party libraries
-* src/: Application JavaScript files
+* /build/: Post-processed and minified JavaScript/CSS files
+* /lib/: Third-party libraries
+* /src/: Application JavaScript files
+* /previewer.html: 3D model previewer
 
 Grunt is used to concatenate the source files in `lib` and `src` together into
 one file in `build`. It then invokes uglifierjs to minify the resulting
@@ -26,7 +27,7 @@ Then invoke Grunt:
 
 This will produce post-processed JavaScript and CSS assets in the `build`
 folder. If you are developing, run `grunt watch` to have Grunt automatically
-reprocess files whenever they change.
+reprocess files when they change.
 
 ## Configuration
 
