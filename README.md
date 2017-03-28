@@ -30,12 +30,16 @@ This will produce post-processed JavaScript and CSS assets in the `build`
 folder. If you are developing, run `grunt watch` to have Grunt automatically
 reprocess files when they change.
 
-## Configuration
-
-See `index.html` for an example.
+# Previewer
 
 ## Usage
 
-Open `index.html` and drop a 3D model folder onto the drop area. **The folder
+Open `previewer.html` and drop a 3D model folder onto the drop area. **The folder
 must be located at the top level inside the 3D viewer folder.** This is because
 there is no way to get full path info for the local filesystem in JavaScript.
+
+# Viewer
+
+## Configuration
+
+See `viewer.html` for an example.
