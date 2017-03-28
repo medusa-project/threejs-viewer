@@ -4,6 +4,7 @@
 * /lib/: Third-party libraries
 * /src/: Application JavaScript files
 * /previewer.html: 3D model previewer
+* /viewer.html: 3D model viewer
 
 Grunt is used to concatenate the source files in `lib` and `src` together into
 one file in `build`. It then invokes uglifierjs to minify the resulting

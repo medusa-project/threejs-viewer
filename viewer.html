@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>3D Model Viewer</title>
+    <style>
+        #viewer-container {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="viewer-container"></div>
+
+    <script src="build/3dviewer.js"></script>
+
+    <script>
+        new ThreeJSViewer({
+            'containerId': 'viewer-container',
+            'modelPath': 'sample_model/',
+            'objFile': '120991_014.OBJ',
+            'mtlFile': '120991_014.mtl'
+        });
+    </script>
+</body>
+</html>
