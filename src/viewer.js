@@ -12,17 +12,27 @@
  *                                   options.modelPath.
  * @param {number} [options.ambientLightColor] - Ambient light color. Optional.
  *                                               Defaults to 0x808080.
+ * @param {number} [options.ambientLightIntensity] - Ambient light intensity.
+ *                                                   Optional. Defaults to 1.5.
  * @param {number} [options.directionalLightColor] - Directional light color.
  *                                                   Optional. Defaults to
  *                                                   0xffffff.
+ * @param {number} [options.directionalLightIntensity] - Directional light
+ *                                                       intensity. Optional.
+ *                                                       Defaults to 1.5.
  */
 function ThreeJSViewer(options) {
 
   var AMBIENT_LIGHT_COLOR = (options.ambientLightColor !== undefined) ?
       options.ambientLightColor : 0x808080;
+  var AMBIENT_LIGHT_INTENSITY = (options.ambientLightIntensity !== undefined) ?
+      options.ambientLightIntensity : 1.5;
   var CONTAINER_ID = options.containerId;
   var DIRECTIONAL_LIGHT_COLOR = (options.directionalLightColor !== undefined) ?
       options.directionalLightColor : 0xffffff;
+  var DIRECTIONAL_LIGHT_INTENSITY =
+      (options.directionalLightIntensity !== undefined) ?
+      options.directionalLightIntensity : 1.5;
   var MODEL_PATH = options.modelPath;
   var MTL_FILE = options.mtlFile;
   var OBJ_FILE = options.objFile;
@@ -55,9 +65,11 @@ function ThreeJSViewer(options) {
     scene = new THREE.Scene();
 
     var ambient = new THREE.AmbientLight(AMBIENT_LIGHT_COLOR);
+    ambient.intensity = AMBIENT_LIGHT_INTENSITY;
     scene.add(ambient);
 
     var directionalLight = new THREE.DirectionalLight(DIRECTIONAL_LIGHT_COLOR);
+    directionalLight.intensity = DIRECTIONAL_LIGHT_INTENSITY;
     directionalLight.position.set(0, 0, 1).normalize();
     scene.add(directionalLight);
 
