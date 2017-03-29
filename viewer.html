@@ -18,12 +18,13 @@
     <script src="build/3dviewer.js"></script>
 
     <script>
-        new ThreeJSViewer({
+        var viewer = new ThreeJSViewer({
             'containerId': 'viewer-container',
             'modelPath': 'sample_model/',
             'objFile': '120991_014.OBJ',
             'mtlFile': '120991_014.mtl'
         });
+        viewer.start();
     </script>
 </body>
 </html>

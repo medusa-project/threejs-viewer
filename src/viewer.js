@@ -29,9 +29,6 @@ function ThreeJSViewer(options) {
 
   var camera, controls, scene, renderer;
 
-  init();
-  animate();
-
   function animate() {
     requestAnimationFrame(animate);
     controls.update();
@@ -50,7 +47,7 @@ function ThreeJSViewer(options) {
     return getContainer().offsetWidth;
   };
 
-  function init() {
+  this.start = function() {
     // Initialize the camera.
     camera = new THREE.PerspectiveCamera(45, getWidth() / getHeight(), 1, 2000);
 
@@ -105,6 +102,8 @@ function ThreeJSViewer(options) {
     controls = new THREE.OrbitControls(camera, renderer.domElement);
 
     window.addEventListener('resize', onWindowResize, false);
+
+    animate();
   }
 
   function onWindowResize() {
